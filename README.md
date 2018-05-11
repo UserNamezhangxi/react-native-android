@@ -64,7 +64,7 @@
 	### 请注意 ###
 		 
 	- 1. 在`createNativeModules`方法中加入`modules.add(new RNModule(reactContext));`表示将我们的 `model` 注册在`NativeModule`中了
-	- 2. `AndroidStuido`自动生成的`createViewManagers`方法返回值为`null`,后面运行是会坑的，所以这里需要些成` Collections.emptyList()；`
+	- 2. `AndroidStuido`自动生成的`createViewManagers`方法返回值为`null`,后面运行是会坑的，所以这里需要改成` Collections.emptyList()；`
 
 3.	使用：
 		
@@ -172,6 +172,9 @@
 	注册监听 在底层 触发事件的名称`EventName`,就可以实现数据接收了。
 
 ---------------
+最后来一个demo效果
+![demo](https://i.imgur.com/6RC4Cj2.gif)
+android拼错了。。懒得换图了，大家莫喷哈。。
 
 ## 如果有疑问或者更好的见解，欢迎拍砖 ##
 	
