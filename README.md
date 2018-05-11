@@ -92,7 +92,7 @@
 
 1.	只要让RN 刚刚启动不加载默认的MainActivity ，加载我们自己的Activity就可以。
 
-    创建自己的`activirt`
+    创建自己的`activity`
 
 		public class MyReactActivity extends AppCompatActivity {
 	
