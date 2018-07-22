@@ -66,7 +66,18 @@
 	- 1. 在`createNativeModules`方法中加入`modules.add(new RNModule(reactContext));`表示将我们的 `model` 注册在`NativeModule`中了
 	- 2. `AndroidStuido`自动生成的`createViewManagers`方法返回值为`null`,后面运行是会坑的，所以这里需要改成` Collections.emptyList()；`
 
-3.	使用：
+3.	在`MainApplication.java` 注册一下
+	
+		@Override
+		protected List<ReactPackage> getPackages() {
+		  return Arrays.<ReactPackage>asList(
+		      new MainReactPackage(),
+		      new RegisterJsReactPackage()
+		  );
+		}
+
+
+4.	使用：
 		
 		import {
 		    ...
